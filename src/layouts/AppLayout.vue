@@ -1,34 +1,41 @@
 <script setup>
 import AppMenu from "@/components/AppMenu.vue";
 </script>
+
 <template>
     <div class="root">
         <div class="menuInner">
-            <AppMenu />
+            <AppMenu></AppMenu>
         </div>
-        <main class="main">
+        <div class="main">
             <header class="header">
-                <div class="title"><slot name="title"></slot></div>
-                <div class="controls"><slot name="controls"></slot></div>
+                <div class="title">
+                    <slot name="title"></slot>
+                </div>
+                <div class="controls">
+                    <slot name="controls"></slot>
+                </div>
             </header>
             <div class="inner">
                 <slot name="inner"></slot>
             </div>
-        </main>
+        </div>
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as v;
-.main {
-    flex: 1;
-    padding: 20px 16px;
-}
+@use "@/assets/styles/index.scss";
+
 .root {
     display: flex;
 }
 .menuInner {
     width: 70px;
+}
+.main {
+    padding: 20px 16px;
+    flex: 1;
 }
 .header {
     display: flex;
@@ -39,8 +46,5 @@ import AppMenu from "@/components/AppMenu.vue";
     font-size: 28px;
     font-weight: 700;
     color: v.$violet;
-}
-.inner {
-    padding-top: 20px;
 }
 </style>

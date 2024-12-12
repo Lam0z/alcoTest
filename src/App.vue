@@ -1,12 +1,6 @@
 <script setup>
-import { onMounted } from "vue";
-import { useRootStore } from "./stores/root";
-
-const store = useRootStore();
-
-onMounted(() => {
-    store.getAreas();
-});
+import { RouterLink, RouterView } from "vue-router";
+// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -14,5 +8,5 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-@use "./assets/styles/index.scss";
+@use "@/assets/styles/index.scss";
 </style>

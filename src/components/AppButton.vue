@@ -7,14 +7,16 @@ const props = defineProps({
 });
 </script>
 <template>
-    <el-button type="primary" class="btn">{{ text }}</el-button>
+    <el-button class="btn" type="primary">{{ text }}</el-button>
 </template>
 
 <style lang="scss" scoped>
 @use "@/assets/styles/variables.scss" as v;
+
 .btn {
-    background-color: v.$violet;
     padding: 20px 24px;
+    font-size: 17px;
     border-radius: 4px;
+    background-color: v.$violet;
 }
 </style>

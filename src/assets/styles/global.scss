@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 html,
 body {
     margin: 0;
@@ -9,21 +10,17 @@ body {
     font-size: 16px;
     line-height: 1.4;
 }
+
 a {
     color: inherit;
     text-decoration: none;
-}
-a:hover,
-a:focus {
-    text-decoration: none;
-}
-img {
-    max-width: 100%;
-    width: 100%;
-    object-fit: cover;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
 }
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
